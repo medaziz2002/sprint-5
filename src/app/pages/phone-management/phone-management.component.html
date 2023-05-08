@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Category</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+</head>
+<body id="page-top">
+
+
+
+
+  <div id="wrapper">
+
+   
+  <app-menu></app-menu>
+
+ 
+    <div id="content-wrapper" class="d-flex flex-column">
+
+
+      <div id="content">
+
+    
+       <app-header></app-header>
+
+
+        <div class="container-fluid">
+
+    
+
+
+        </div>
+        <div class="col" class="d-flex justify-content-center">
+            <div class="card shadow mb-4" class="col col-lg-5">
+        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+            <h6 class="m-0 font-weight-bold text-primary">
+                Ajout Telephone</h6>
+          </div>
+
+          <div class="card-body">
+        <form >
+            <div class="form-group">
+
+            <input type="text" class="form-control"   name="nomTelephone" placeholder="nom Telephone" [(ngModel)]="newPhone.nomTelephone" >
+           
+            </div>
+      
+
+          <div class="form-group">
+
+              <input type="text" class="form-control"  name="societe"placeholder="societe" [(ngModel)]="newPhone.societe ">
+           
+      </div>
+      <div class="form-group">
+
+        <input type="number" class="form-control"  name="prixTelephone" placeholder="prix Telephone"  [(ngModel)]="newPhone.prixTelephone ">
+    
+      </div>
+
+       <div class="form-group">
+
+        <input type="Date" class="form-control" name="dateCreation"  placeholder="Date sous forme jj/mm/aaaa" name="dateCreation"  [(ngModel)]="newPhone.dateCreation ">
+     
+       </div>
+
+       <div  class="form-group">
+     
+        <select class="form-control form-control-lg" id="idType" name="idType" [(ngModel)]="newIdType">
+          <option selected>selectionner une type</option>
+            <option *ngFor="let typ of types" [value]="typ.idType">
+                {{typ.nomtype}}
+            </option>
+        </select>
+    </div> 
+
+
+
+
+       <div class="form-group">
+       <input type="file" (change)="onImageUpload($event)" name="logo" class="form-control">
+       </div>
+
+       <div class="form-group">
+       <img [src]="imagePath" class="card-img-top img-fluid rounded-start" style="width: 500px; height: 300px" />
+       </div>
+
+
+
+           <button type="submit" class="btn btn-sm btn-primary mt-3"  (click)="addPhone()">Save</button>
+
+      </form>
+    </div>
+
+    </div>
+    </div>
+      </div>
+     
+   <app-footer></app-footer>
+     
+    </div>
+ 
+
+  </div>
+
+
+
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">x</span>
+          </button>
+        </div>
+        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+          <a class="btn btn-primary" href="login.html">Logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+</body>
+</html>
+
