@@ -4,7 +4,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { AjoutContactComponent } from './ajout-contact/ajout-contact.component';
+
 
 import { MenuComponent } from './components/menu/menu.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -26,7 +26,7 @@ import { PhoneComponent } from './pages/phone/phone.component';
    
 
     
-    AjoutContactComponent,
+
     HeaderComponent,
     MenuComponent,
     FooterComponent,
