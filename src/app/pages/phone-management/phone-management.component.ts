@@ -52,7 +52,7 @@ export class PhoneManagementComponent implements OnInit {
             this.uploadedImage.name, phone.idTelephone)
           .subscribe((response: any) => { console.log("le path est "+this.uploadedImage.name)}
           );
-        this.router.navigate(['phones']);
+        this.router.navigate(['affichephone']);
       });
   }
 

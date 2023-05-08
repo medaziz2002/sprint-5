@@ -9,7 +9,7 @@ import { InterceptorService } from 'src/app/services/interceptor/interceptor.ser
   styleUrls: ['./phone.component.css']
 })
 export class PhoneComponent implements OnInit {
-
+  p:number=1;
   phones? : Phone[]; 
   apiurl:string='http://localhost:9091/api/v1/images';
 

@@ -70,8 +70,8 @@ export class PhoneService {
       headers: httpHeaders,
       interceptor: this.interceptorService
     };
-
-          return this.http.delete(this.apiURL+"/delphone/{id}",  {headers:httpHeaders});
+    const url = `${this.apiURL}/phones/delphone/${id}`;
+          return this.http.delete(url,  {headers:httpHeaders});
     }
 
 
